@@ -45,6 +45,16 @@ struct GeminiService {
     /// Change this if Google retires the model.
     static let model = "gemini-2.5-flash"
 
+    /// Key baked in at build time from Secrets.xcconfig (via Info.plist); empty if not configured.
+    static let bundledKey = (Bundle.main.object(forInfoDictionaryKey: "GEMINI_API_KEY") as? String ?? "")
+        .trimmingCharacters(in: .whitespaces)
+
+    /// The user's own key from settings wins; otherwise the bundled key is used.
+    static func resolvedKey(userKey: String) -> String {
+        let trimmed = userKey.trimmingCharacters(in: .whitespaces)
+        return trimmed.isEmpty ? bundledKey : trimmed
+    }
+
     let apiKey: String
 
     func generateRecipe(for request: String, catalog: [CatalogEntry]) async throws -> Recipe {

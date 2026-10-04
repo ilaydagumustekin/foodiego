@@ -30,3 +30,8 @@ Product images are 3D illustrations from **Fluent Emoji** by Microsoft
 ## Category photos
 
 Category cover photos (`category_1` … `category_6`) were provided by the project owner.
+
+## Fruit & vegetable photos
+
+Photos for all products, and the AI assistant mascot (`ai_assistant`),
+were provided by the project owner.

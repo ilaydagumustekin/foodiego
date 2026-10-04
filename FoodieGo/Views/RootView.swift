@@ -96,11 +96,7 @@ struct MainTabView: View {
     /// Floating AI chef button, like a chat bubble launcher.
     private var assistantButton: some View {
         Button { router.showAssistant = true } label: {
-            Image(systemName: "sparkles")
-                .font(.title2.weight(.semibold))
-                .foregroundStyle(.white)
-                .frame(width: 58, height: 58)
-                .background(Circle().fill(LinearGradient(colors: [Theme.primary, Theme.green], startPoint: .top, endPoint: .bottom)))
+            AssistantAvatar(size: 58)
                 .overlay(Circle().stroke(.white, lineWidth: 3))
                 .shadow(color: Theme.green.opacity(0.4), radius: 10, y: 5)
         }

@@ -133,6 +133,8 @@ struct APIKeyView: View {
                 .background(RoundedRectangle(cornerRadius: 14).fill(Theme.field))
             if !apiKey.isEmpty {
                 Label("Anahtar kaydedildi", systemImage: "checkmark.circle.fill").foregroundStyle(Theme.green)
+            } else if !GeminiService.bundledKey.isEmpty {
+                Label("Uygulamanın varsayılan anahtarı kullanılıyor", systemImage: "checkmark.circle.fill").foregroundStyle(Theme.green)
             }
             Spacer()
         }

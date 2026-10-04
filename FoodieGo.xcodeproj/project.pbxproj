@@ -34,6 +34,7 @@
 		6FDB67E5D41B3C246F279FA1 /* RecipeAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAssistantView.swift; sourceTree = "<group>"; };
 		746C2394256D486633A8CC42 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		870CF9A4CE6340897BA95402 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		8FF4ADEC7199148DD4DE4819 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		948E7B3FB1EC9F0EE035EF17 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		95002BDA884EF736FBB83CA0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AADF06EC80B8443688DE5A49 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				9129996770517616E0C52D72 /* FoodieGo */,
+				5B6F347D06AEAF5F349F94EA /* FoodieGo */,
 				2661D3AA8C911265829F1449 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +97,15 @@
 				237B57E51B5872DF1BF0FA81 /* Session.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5B6F347D06AEAF5F349F94EA /* FoodieGo */ = {
+			isa = PBXGroup;
+			children = (
+				8FF4ADEC7199148DD4DE4819 /* Config.xcconfig */,
+			);
+			name = FoodieGo;
+			path = .;
 			sourceTree = "<group>";
 		};
 		9129996770517616E0C52D72 /* FoodieGo */ = {
@@ -199,11 +210,13 @@
 /* Begin XCBuildConfiguration section */
 		659649A85441EC0D683E77EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF4ADEC7199148DD4DE4819 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FoodieGo;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -341,11 +354,13 @@
 		};
 		F12E2044EE771AD75C5FF7D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF4ADEC7199148DD4DE4819 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FoodieGo;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -38,7 +38,7 @@ struct AssistantSheet: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     VStack(alignment: .leading, spacing: 14) {
-                        if apiKey.isEmpty { apiKeyCard }
+                        if GeminiService.resolvedKey(userKey: apiKey).isEmpty { apiKeyCard }
                         ForEach(entries) { entry in
                             bubble(for: entry).id(entry.id)
                         }
@@ -186,7 +186,7 @@ struct AssistantSheet: View {
 
         // Only id, name, unit and price go to the model — just enough to match ingredients.
         let catalog = products.map { CatalogEntry(id: $0.productID, name: $0.name, price: $0.price, unit: $0.unit) }
-        let service = GeminiService(apiKey: apiKey)
+        let service = GeminiService(apiKey: GeminiService.resolvedKey(userKey: apiKey))
 
         Task {
             do {
@@ -205,11 +205,12 @@ struct AssistantAvatar: View {
     var size: CGFloat = 40
 
     var body: some View {
-        Image(systemName: "sparkles")
-            .font(.system(size: size * 0.42, weight: .semibold))
-            .foregroundStyle(.white)
+        Image("ai_assistant")
+            .resizable()
+            .scaledToFill()
             .frame(width: size, height: size)
-            .background(Circle().fill(LinearGradient(colors: [Theme.primary, Theme.green], startPoint: .top, endPoint: .bottom)))
+            .background(.white)
+            .clipShape(Circle())
     }
 }
 
